@@ -1,0 +1,7 @@
+{
+  "name": "google-spreadsheet-reader",
+  "description": "Read google spreadsheet and return JSON values",
+  "version": "0.0.1",
+  "dependencies": {},
+  "main": "index.js"
+}
