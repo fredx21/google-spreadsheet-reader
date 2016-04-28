@@ -78,10 +78,12 @@
             path: path
         };
 
+        var StringDecoder = require('string_decoder').StringDecoder;
         var data = ''
         https.request(options, function (response) {
+            var decoder = new StringDecoder('utf8');
             response.on('data', function (chunk) {
-                data += chunk;
+                data += decoder.write(chunk);
             });
 
             response.on('end', function () {
